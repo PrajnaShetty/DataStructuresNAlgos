@@ -21,6 +21,13 @@ public class SinglyLinkedList<E> {
         list.insertAfter(second, 99);
         list.append(4);
         list.printList();
+
+        //delete list
+        list.deleteKey(3);
+        list.printList();
+
+        list.deleteAtPosition(3);
+        list.printList();
     }
 
     public void printList() {
@@ -66,6 +73,53 @@ public class SinglyLinkedList<E> {
         }
         node.next = newNode;
     }
+
+
+     /* Given a key, deletes the first occurrence of key in linked list */
+     public void deleteKey(E key) {
+         Node<E> temp = head;
+         Node<E> prev = null;
+
+         //head node needs to be deleted
+         if (temp != null && temp.data == key) {
+             head = temp.next;
+             return;
+         }
+
+         while(temp != null && temp.data != key) {
+             prev = temp;
+             temp = temp.next;
+         }
+
+         //if key not present
+         if (temp == null)
+             return;
+
+         prev.next = temp.next;
+
+     }
+
+     public void deleteAtPosition(int position) {
+         if (head == null)
+             return;
+
+         Node temp = head;
+
+         if (position == 0) {
+             head = temp.next;
+             return;
+         }
+
+         for (int i = 0 ; i < position - 1; i++) {
+             temp = temp.next;
+         }
+
+         if (temp == null || temp.next == null)
+             return;
+
+         temp.next = temp.next.next;
+
+     }
 
 
 }
