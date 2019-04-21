@@ -1,4 +1,4 @@
-package trees;
+package datastructures.trees;
 
 /**
  * Created by prajnashetty on 1/4/19.
@@ -6,12 +6,8 @@ package trees;
 public class FibonacciTree {
 
     public static void main(String[] args) {
-        System.out.print("Fibonacci Tree - Recursive : ");
-        Node root = buildTreeRecursive(5);
-        inorder(root);
-
         System.out.print("\nFibonacci Tree - Iterative : ");
-        root = buildTreeIterative(5);
+        Node root = buildTreeIterative(6);
         inorder(root);
     }
 
@@ -23,16 +19,6 @@ public class FibonacciTree {
         inorder(temp.right);
     }
 
-    private static Node buildTreeRecursive(int n) {
-        if (n < 2) {
-            return new Node(n, null, null);
-        } else {
-            Node node = new Node(n, null, null);
-            node.left = buildTreeRecursive(n - 1);
-            node.right =  buildTreeRecursive(n - 2);
-            return node;
-        }
-    }
 
 
     private static Node buildTreeIterative(int n) {
@@ -42,7 +28,8 @@ public class FibonacciTree {
         nodeArray[1] = new Node(1, null, null);
 
         for (int i = 2; i <= n ; i++) {
-            Node node = new Node(i, null, null);
+            int value = nodeArray[i - 1].val + nodeArray[i - 2].val;
+            Node node = new Node(value, null, null);
             node.left = nodeArray[i - 1];
             node.right = nodeArray[i - 2];
             nodeArray[i] = node;

@@ -1,6 +1,4 @@
-package elementarydatastructures.queues;
-
-import java.util.Queue;
+package datastructures.queues;
 
 /**
  * Created by prajnashetty on 1/23/19.
@@ -21,10 +19,10 @@ public class QueueUsingLinkedList<E> {
 
         if (rear == null) {
             front = rear = temp;
+        } else {
+            rear.next = temp;
+            rear = temp;
         }
-
-        rear.next = temp;
-        rear = temp;
     }
 
     public QNode dequeue() {

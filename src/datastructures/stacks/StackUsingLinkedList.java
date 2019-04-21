@@ -1,4 +1,4 @@
-package elementarydatastructures.stacks;
+package datastructures.stacks;
 
 import java.util.NoSuchElementException;
 
