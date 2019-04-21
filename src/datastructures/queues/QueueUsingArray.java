@@ -1,4 +1,4 @@
-package elementarydatastructures.queues;
+package datastructures.queues;
 
 /**
  * Created by prajnashetty on 1/23/19.

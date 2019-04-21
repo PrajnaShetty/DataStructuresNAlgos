@@ -1,4 +1,4 @@
-package elementarydatastructures.linkedlist;
+package datastructures.linkedlist;
 
 /**
  * Created by prajnashetty on 1/19/19.

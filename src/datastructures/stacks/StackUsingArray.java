@@ -1,4 +1,4 @@
-package elementarydatastructures.stacks;
+package datastructures.stacks;
 
 import java.util.Arrays;
 
@@ -24,6 +24,10 @@ public class StackUsingArray<E> {
     }
 
     public E pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return null;
+        }
         E ele = (E)elements[--top];
         elements[top] = null;
         return ele;
@@ -70,6 +74,8 @@ public class StackUsingArray<E> {
         System.out.println(integerStack);
         System.out.println("Size = " + integerStack.getSize());
 
+        System.out.println( integerStack.pop() );
+        System.out.println( integerStack.pop() );
         System.out.println( integerStack.pop() );
         System.out.println( integerStack.pop() );
         System.out.println( integerStack.pop() );

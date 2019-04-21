@@ -21,7 +21,8 @@ package dynamicprogramming;
  { {3}, {1, 2} }
  { {1, 2, 3} }.
 
- Let S(n, k) be total number of partitions of n elements into k sets. The value of n’th Bell Number is sum of S(n, k) for k = 1 to n.
+ Let S(n, k) be total number of partitions of n elements into k sets.
+ The value of n’th Bell Number is sum of S(n, k) for k = 1 to n.
 
  Bell(n) =  \sum_{k=0}^{n}S(n,k)
 

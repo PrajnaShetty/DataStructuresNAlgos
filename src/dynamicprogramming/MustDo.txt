@@ -1,0 +1,24 @@
+Longest Increasing Subsequence
+Longest Common Subsequence - DONE
+0 – 1 Knapsack Problem - DONE
+Minimum number of jumps - DONE
+Edit Distance 
+Coin Change Problem - DONE
+Subset Sum Problem
+Box Stacking
+Rod Cutting
+Path in Matrix
+Minimum sum partition
+Count number of ways to cover a distance
+Egg Dropping Puzzle
+Optimal Strategy for a Game
+Shortest Common Supersequence
+Travelling Salesman
+Bellman Ford
+Boolean Parenthesization Problem
+Ways to Cover a Distance
+Matrix Chain Multiplication
+Word Break Problem
+Maximal Product when Cutting Rope
+Dice Throw Problem
+

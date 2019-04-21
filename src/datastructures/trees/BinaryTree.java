@@ -1,6 +1,4 @@
-package trees;
-
-import elementarydatastructures.queues.QueueUsingStack;
+package datastructures.trees;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -35,13 +33,13 @@ public class BinaryTree<E> {
 
     public void preorderIterative(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
-        LinkedList<Integer> res = new LinkedList<>();
+        LinkedList<Integer> result = new LinkedList<>();
 
         TreeNode node = root;
         while(node != null || !stack.isEmpty()) {
             if (node != null) {
                 stack.push(node);
-                res.add((int)node.data);
+                result.add((int)node.data);
                 node = node.left;
             } else {
                 node = stack.pop();
@@ -49,7 +47,7 @@ public class BinaryTree<E> {
             }
         }
 
-        System.out.print(res);
+        System.out.print(result);
     }
 
     public void inorderIterative(TreeNode root) {
@@ -173,6 +171,14 @@ public class BinaryTree<E> {
         return Math.min(res, Math.min(lres, rres));
     }
 
+    int getTreeHeight(TreeNode node){
+
+        if (node == null)
+            return 0;
+        return 1 + Math.max(getTreeHeight(node.left), getTreeHeight(node.right));
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -216,6 +222,8 @@ public class BinaryTree<E> {
 
         System.out.print("\nMax : " + tree.findMax(tree.root));
         System.out.print("\nMin : " + tree.findMin(tree.root));
+
+        System.out.print("\nTree Height : " + tree.getTreeHeight(tree.root));
 
     }
 

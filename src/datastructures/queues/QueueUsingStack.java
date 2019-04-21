@@ -1,4 +1,4 @@
-package elementarydatastructures.queues;
+package datastructures.queues;
 
 import java.util.Stack;
 
